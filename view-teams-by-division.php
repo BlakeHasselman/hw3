@@ -12,14 +12,14 @@
     </thead>
     <tbody>
 <?php
-while ($division = $divisions->fetch_assoc()) {
+while ($team = $teams->fetch_assoc()) {
   ?>
 <tr>
-  <td><?php echo $division['team_id']; ?></td>
-  <td><?php echo $division['division_conference']; ?></td>
-  <td><?php echo $division['divison_name']; ?></td>
-  <td><?php echo $division['team_location']; ?></td>
-  <td><?php echo $division['team_name']; ?></td>
+  <td><?php echo $team['team_id']; ?></td>
+  <td><?php echo $team['division_conference']; ?></td>
+  <td><?php echo $team['divison_name']; ?></td>
+  <td><?php echo $team['team_location']; ?></td>
+  <td><?php echo $team['team_name']; ?></td>
 </tr>     
   <?php
   
