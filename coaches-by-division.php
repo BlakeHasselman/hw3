@@ -4,7 +4,7 @@ require_once("model-coaches-by-division.php");
 
 $pageTitle = "Coaches by Division";
 include "view-header.php";
-$coaches = selectCoachesByDivision($_POST['did']);
+$coaches = selectCoachesByDivision($_POST['cid']);
 include "view-coaches-by-division.php";
 include "view-footer.php";
 ?>
