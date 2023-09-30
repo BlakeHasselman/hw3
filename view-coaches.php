@@ -1,4 +1,4 @@
-<h1>Teams</h1>
+<h1>Coaches</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
