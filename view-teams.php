@@ -6,7 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Location</th>
-        <th></th>
+        <th>Link to Coaches and Team</th>
       </tr>
     </thead>
     <tbody>
