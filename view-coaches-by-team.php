@@ -18,8 +18,8 @@ while ($coach = $coaches->fetch_assoc()) {
   <td><?php echo $coach['coach_id']; ?></td>
   <td><?php echo $coach['coach_name']; ?></td>
   <td><?php echo $coach['coach_position']; ?></td>
-  <td><?php echo $team['team_location']; ?></td>
-  <td><?php echo $team['team_name']; ?></td>
+  <td><?php echo $coach['team_location']; ?></td>
+  <td><?php echo $coach['team_name']; ?></td>
 </tr>     
   <?php
   
