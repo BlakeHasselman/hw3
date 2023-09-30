@@ -6,6 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Staff Position</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,12 @@ while ($coach = $coaches->fetch_assoc()) {
   <td><?php echo $coach['coach_id']; ?></td>
   <td><?php echo $coach['coach_name']; ?></td>
   <td><?php echo $coach['coach_position']; ?></td>
+  <td>
+    <form method="post" action="coaches-by-division.php">
+      <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>">
+        <button type="submit" class="btn btn-primary">Division</button>
+      </form>
+  </td>
 </tr>     
   <?php
   
