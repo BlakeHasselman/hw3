@@ -6,7 +6,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Position</th>
-      <th></th>
+      <th>Player's Team and Coaches</th>
       </tr>
     </thead>
     <tbody>
