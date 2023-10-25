@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      insertCoach($_POST['tID'], $_POST['cName'], $_POST['cPosition'])
+      insertCoach($_POST['tID'], $_POST['cName'], $_POST['cPosition']);
         break;
   }
 }
