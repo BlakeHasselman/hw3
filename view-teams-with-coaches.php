@@ -10,7 +10,7 @@ include "view-teams-with-coaches-newform.php";
 </div>
 <div class="card-group">
 <?php
-while ($team = $instructors->fetch_assoc()) {
+while ($team = $teams->fetch_assoc()) {
 ?>
   <div class="card">
     <div class="card-body">
