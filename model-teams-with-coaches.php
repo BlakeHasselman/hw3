@@ -28,6 +28,33 @@ function selectCoachesByTeam($tid) {
     } 
 }
 
+function selectTeamsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT team_id, team_name FROM `team` order by team_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectCoachesForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT coach_id, coach_name FROM `coach` order by coach_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 
 function insertCoachesByTeam($coach_name, $coach_position, $team_id) {
     try {
