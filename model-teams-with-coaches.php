@@ -85,7 +85,7 @@ function updateCoachByTeam($tID, $cName, $cPosition, $cid) {
     }
 }
 
-function deleteCoach($cid) {
+function deleteCoachByTeam($cid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from coach where coach_id = ?");
