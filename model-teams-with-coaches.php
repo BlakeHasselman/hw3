@@ -74,7 +74,7 @@ function insertCoachByTeam($coach_name, $coach_position, $team_id) {
 function updateCoachByTeam($tID, $cName, $cPosition) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `coach` set `coach_name` = ?, `coach_position` = ?, 'team_id' = ?");
+        $stmt = $conn->prepare("update `coach` set `coach_name` = ?, `coach_position` = ?, `team_id` = ?");
         $stmt->bind_param("ssi", $cName, $cPosition, $tID);
         $success = $stmt->execute();
         $conn->close();
