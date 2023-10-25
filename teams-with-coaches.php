@@ -7,14 +7,14 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertCoachByTeam($_POST['cName'], $_POST['cPosition'], $_POST['team_location'], $_POST['team_name'])) {
+      if (insertCoachByTeam($_POST['cName'], $_POST['cPosition'], $_POST['team_location'], $_POST['team_id'])) {
         echo '<div class="alert alert-success" role="alert">Coach Added!</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
         break;
     case "Edit":
-      if (updateCoachByTeam($_POST['cName'], $_POST['cPosition'], $_POST['team_location'], $_POST['team_name'])) {
+      if (updateCoachByTeam($_POST['cName'], $_POST['cPosition'], $_POST['team_location'], $_POST['team_id'])) {
         echo '<div class="alert alert-success" role="alert">Coach Edited!</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
