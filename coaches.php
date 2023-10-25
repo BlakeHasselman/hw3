@@ -14,7 +14,13 @@ if (isset($_POST['actionType'])) {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
         break;
-  }
+    case "Delete":
+      if (deleteCoach($_POST['cid'])) {
+        echo '<div class="alert alert-success" role="alert">Coach Deleted!</div>';
+      } else {
+        echo '<div class="alert alert-danger" role="alert">Error</div>';
+      }
+        break;  }
 }
 $coaches = selectCoaches();
 include "view-coaches.php";
