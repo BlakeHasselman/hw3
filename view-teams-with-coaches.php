@@ -6,6 +6,8 @@
 <?php
 include "view-teams-with-coaches-newform.php";
 ?>
+  </div>
+</div>
 <div class="card-group">
 <?php
 while ($team = $teams->fetch_assoc()) {
@@ -15,9 +17,6 @@ while ($team = $teams->fetch_assoc()) {
       <h5 class="card-title"><?php echo $team['team_name']; ?></h5>
       <p class="card-text">
         <ul class="list-group">
-<?php
-include "view-teams-with-coaches-editform.php";
-?>
   <?php
     $coaches = selectCoachesByTeam($team['team_id']);
     while ($coach = $coaches->fetch_assoc()) {
