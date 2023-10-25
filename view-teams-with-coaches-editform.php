@@ -25,9 +25,13 @@
     <input type="text" class="form-control" id="cPosition<?php echo $coach['coach_id']; ?>" name="cPosition" value="<?php echo $coach['coach_position']; ?>">
   </div>
   <div class="mb-3">
-    <label for="team_id<?php echo $coach['coach_id']; ?>" class="form-label">Team Location</label>
-    <input type="text" class="form-control" id="team_id<?php echo $coach['coach_id']; ?>" name="team_name" value="<?php echo $coach['coach_id']; ?>">
-  </div>
+    <label for="team_id<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
+  <?php
+$teamList = selectTeamsForInput();
+$selectedTeam = $coach['team_id'];
+include "view-team-input-list.php";
+?>
+</div>
     <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>"> 
     <input type="hidden" name="actionType" value="Edit">
     <button type="submit" class="btn btn-primary">Save</button>
