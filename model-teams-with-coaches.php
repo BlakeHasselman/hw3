@@ -32,9 +32,9 @@ function selectCoachesByTeam($tid) {
 function insertCoachesByTeam($coach_id, $coach_name, $coach_position, $team_location, $team_name) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`) VALUES (?, ?, ?))";
+        $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`) VALUES (?, ?, ?)");
         $stmt->bind_param("ss", $cName, $cPosition);
-        $stmt = $conn->prepare("INSERT INTO `team` (`team_location`, `team_name`) VALUES (?, ?))";
+        $stmt = $conn->prepare("INSERT INTO `team` (`team_location`, `team_name`) VALUES (?, ?)");
         $stmt->bind_param("ss", $tLocation, $tName);
         $stmt->execute();
         $result = $stmt->get_result();
