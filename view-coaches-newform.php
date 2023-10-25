@@ -25,7 +25,7 @@
     <input type="text" class="form-control" id="cName" name="cName">
   </div>
   <div class="mb-3">
-    <label for="cPosition" class="form-label">Coach Position</label>
+    <label for="cPosition" class="form-label">Staff Position</label>
     <input type="text" class="form-control" id="cPosition" name="cPosition">
   </div>
     <button type="submit" class="btn btn-primary">Save</button>
