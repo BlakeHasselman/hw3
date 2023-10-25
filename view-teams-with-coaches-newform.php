@@ -24,11 +24,7 @@
     <label for="cPosition" class="form-label">Staff Position</label>
     <input type="text" class="form-control" id="cPosition" name="cPosition">
   </div>
-  <div class="mb-3">
-    <label for="team_location" class="form-label">Team Location</label>
-    <input type="text" class="form-control" id="team_location" name="team_location">
-  </div>
-  <div class="mb-3">
+    <div class="mb-3">
     <label for="tID" class="form-label">Team ID</label>
     <input type="text" class="form-control" id="tID" name="tID">
   </div>
