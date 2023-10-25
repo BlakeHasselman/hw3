@@ -18,7 +18,7 @@ while ($team = $teams->fetch_assoc()) {
       <p class="card-text">
       <ul class="list-group">
 <?php
-  $courses = selectCoachesByTeam($team['team_id']);
+  $coaches = selectCoachesByTeam($team['team_id']);
   while ($coach = $coaches->fetch_assoc()) {
 ?>
     <li class="list-group-item">
