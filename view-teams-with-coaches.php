@@ -22,7 +22,18 @@ include "view-teams-with-coaches-editform.php";
     $coaches = selectCoachesByTeam($team['team_id']);
     while ($coach = $coaches->fetch_assoc()) {
 ?>
-      <li class="list-group-item"><?php echo $coach['coach_name']; ?> - <?php echo $coach['coach_position']; ?> - <?php echo $coach['team_location']; ?> - <?php echo $coach['team_name']; ?> <form method="post" action="">
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col">
+      <li class="list-group-item"><?php echo $coach['coach_name']; ?> - <?php echo $coach['coach_position']; ?> - <?php echo $coach['team_location']; ?> - <?php echo $coach['team_name']; ?> 
+      </div>
+          <div class="col-auto">
+<?php
+      include "view-teams-with-coaches-editform.php";
+ ?>
+          </div>
+          <div class="col-auto">
+            <form method="post" action="">
       <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>">
       <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
@@ -31,10 +42,10 @@ include "view-teams-with-coaches-editform.php";
             <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
           </svg>
         </button>
-      </form> <form method="post" action="coaches-by-division.php">
-      <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>">
-        <button type="submit" class="btn btn-primary">Division</button>
-      </form> </li>
+      </form>
+          </div>
+        </div>
+      </li>
 <?php
     }
   ?>
