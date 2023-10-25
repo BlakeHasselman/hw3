@@ -98,7 +98,4 @@ function deleteCoachByTeam($cid) {
         throw $e;
     }
 }
-$teams = selectTeams();
-include "view-teams-with-coaches.php";
-include "view-footer.php";
 ?>
