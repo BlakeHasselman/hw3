@@ -29,6 +29,9 @@ while ($coach = $coaches->fetch_assoc()) {
   <td><?php echo $coach['coach_name']; ?></td>
   <td><?php echo $coach['coach_position']; ?></td>
   <td>
+<?php
+include "view-coaches-editform.php";
+?>
   </td>
   <td>
     <form method="post" action="">
