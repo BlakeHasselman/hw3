@@ -29,13 +29,11 @@ function selectCoachesByTeam($tid) {
 }
 
 
-function insertCoachesByTeam($coach_id, $coach_name, $coach_position, $team_location, $team_name) {
+function insertCoachesByTeam($coach_name, $coach_position, $team_id) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`) VALUES (?, ?, ?)");
-        $stmt->bind_param("ss", $cName, $cPosition);
-        $stmt = $conn->prepare("INSERT INTO `team` (`team_location`, `team_name`) VALUES (?, ?)");
-        $stmt->bind_param("ss", $tLocation, $tName);
+        $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`, 'team_id') VALUES (?, ?, ?)");
+        $stmt->bind_param("ssi", $cName, $cPosition, $tID);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -49,10 +47,8 @@ function insertCoachesByTeam($coach_id, $coach_name, $coach_position, $team_loca
 function updateCoachByTeam($tID, $cName, $cPosition, $cid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `coach` set `coach_name` = ?, `coach_position` = ?");
-        $stmt->bind_param("ss", $cName, $cPosition);
-         $stmt = $conn->prepare("update `team` set `team_location` = ?, `team_name` = ?");
-        $stmt->bind_param("ss", $tLocation, $tName);
+        $stmt = $conn->prepare("update `coach` set `coach_name` = ?, `coach_position` = ?, 'team_id' = ?");
+        $stmt->bind_param("ssi", $cName, $cPosition, $tID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
