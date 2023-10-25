@@ -30,15 +30,15 @@ include "view-team-input-list.php";
           </div>
           <div class="mb-3">
             <label for="cName<?php echo $coach['coach_id']; ?>" class="form-label">Coach Name</label>
-            <input type="text" class="form-control" id="sem<?php echo $coach['coach_id']; ?>" name="cName" value="<?php echo $coach['cName']; ?>">
+            <input type="text" class="form-control" id="cName<?php echo $coach['coach_id']; ?>" name="cName" value="<?php echo $coach['cName']; ?>">
           </div>
           <div class="mb-3">
             <label for="cPosition<?php echo $coach['coach_id']; ?>" class="form-label">Coach Position</label>
-            <input type="text" class="form-control" id="room<?php echo $coach['coach_id']; ?>" name="cPosition" value="<?php echo $coach['cPosition']; ?>">
+            <input type="text" class="form-control" id="cPosition<?php echo $coach['coach_id']; ?>" name="cPosition" value="<?php echo $coach['cPosition']; ?>">
           </div>
           <div class="mb-3">
             <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
-            <input type="text" class="form-control" id="daytime<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $coach['tID']; ?>">
+            <input type="text" class="form-control" id="tID<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $coach['tID']; ?>">
           </div>
             <input type="hidden" name="sid" value="<?php echo $coach['coach_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
