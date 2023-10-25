@@ -14,14 +14,14 @@ if (isset($_POST['actionType'])) {
       }
         break;
     case "Edit":
-      if (updateCoachByTeam($_POST['tID'], $_POST['cName'], $_POST['cPosition'])) {
+      if (updateCoach($_POST['tID'], $_POST['cName'], $_POST['cPosition'])) {
         echo '<div class="alert alert-success" role="alert">Coach Edited!</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
       }
         break;
     case "Delete":
-      if (deleteCoachByTeam($_POST['cid'])) {
+      if (deleteCoach($_POST['cid'])) {
         echo '<div class="alert alert-success" role="alert">Coach Deleted!</div>';
       } else {
         echo '<div class="alert alert-danger" role="alert">Error</div>';
