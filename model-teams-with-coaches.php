@@ -56,7 +56,7 @@ function selectCoachesForInput() {
     }
 }
 
-function insertCoachesByTeam($coach_name, $coach_position, $team_id) {
+function insertCoachByTeam($coach_name, $coach_position, $team_id) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`, 'team_id') VALUES (?, ?, ?)");
