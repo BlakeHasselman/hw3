@@ -71,7 +71,7 @@ function insertCoachByTeam($coach_name, $coach_position, $team_id) {
     } 
 }
 
-function updateCoachByTeam($tID, $cName, $cPosition, $cid) {
+function updateCoachByTeam($tID, $cName, $cPosition) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("update `coach` set `coach_name` = ?, `coach_position` = ?, 'team_id' = ?");
