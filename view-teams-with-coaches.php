@@ -22,7 +22,7 @@ include "view-teams-with-coaches-editform.php";
     $coaches = selectCoachesByTeam($team['team_id']);
     while ($coach = $coaches->fetch_assoc()) {
 ?>
-      <li class="list-group-item"><?php echo $coach['coach_name']; ?> - <?php echo $coach['coach_position']; ?> - <?php echo $coach['team_location']; ?> - <?php echo $coach['team_name']; ?> - <?php echo <form method="post" action="">
+      <li class="list-group-item"><?php echo $coach['coach_name']; ?> - <?php echo $coach['coach_position']; ?> - <?php echo $coach['team_location']; ?> - <?php echo $coach['team_name']; ?> <form method="post" action="">
       <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>">
       <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
@@ -34,7 +34,7 @@ include "view-teams-with-coaches-editform.php";
       </form> <form method="post" action="coaches-by-division.php">
       <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>">
         <button type="submit" class="btn btn-primary">Division</button>
-      </form> ?> </li>
+      </form> </li>
 <?php
     }
   ?>
