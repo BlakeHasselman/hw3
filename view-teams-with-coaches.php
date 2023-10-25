@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-<h1>Instructors with courses</h1>
+<h1>Teams with Coaches</h1>
   </div>
   <div class="col-auto">
 <?php
@@ -50,7 +50,7 @@ include "view-teams-with-coaches-editform.php";
 ?>
       </ul>
       </p>
-      <p class="card-text"><small class="text-body-secondary">Office: <?php echo $team['team_id']; ?></small></p>
+      <p class="card-text"><small class="text-body-secondary">Location: <?php echo $team['team_location']; ?></small></p>
     </div>
   </div>
 <?php
