@@ -18,7 +18,7 @@
     <form method="post" action="">
   <div class="mb-3">
     <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team ID</label>
-    <input type="text" class="form-control" id="tID<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $coach['coach_id']; ?>">
+    <input type="text" class="form-control" id="tID<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $team['team_id']; ?>">
   </div>
   <div class="mb-3">
     <label for="cName<?php echo $coach['coach_id']; ?>" class="form-label">Coach Name</label>
