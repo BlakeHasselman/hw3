@@ -1,7 +1,7 @@
 <h1>Teams</h1>
 <div class="col-auto">
   <?php
-include "view-players-newform.php";
+include "view-teams-newform.php";
 ?>
 <div class="table-responsive">
   <table class="table">
