@@ -26,7 +26,7 @@
   </div>
   <div class="mb-3">
     <label for="tLocation<?php echo $team['team_id']; ?>" class="form-label">Team Location</label>
-    <input type="text" class="form-control" id="tLocation<?php echo $team['team_id']; ?>" name="tLocation" value="<?php echo $player['team_location']; ?>">
+    <input type="text" class="form-control" id="tLocation<?php echo $team['team_id']; ?>" name="tLocation" value="<?php echo $team['team_location']; ?>">
   </div>
     <input type="hidden" name="tID" value="<?php echo $team['team_id']; ?>"> 
     <input type="hidden" name="actionType" value="Edit">
