@@ -11,18 +11,22 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editSectionModalLabel<?php echo coach['coach_id']; ?>">Edit section</h1>
+        <h1 class="modal-title fs-5" id="editTeamModalLabel<?php echo $coach['coach_id']; ?>">Edit coach</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="cid<?php echo $coach['coach_id']; ?>" class="form-label">Coach</label>
+            <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
 <?php
 $TeamList = selectTeamsForInput();
 $selectedTeam = $coach['coach_id'];
 include "view-team-input-list.php";
 ?>
+          </div>
+          <div class="mb-3">
+            <label for="cid<?php echo $coach['coach_id']; ?>" class="form-label">Coach</label>
+            <input type="text" class="form-control" id="cid<?php echo $coach['coach_id']; ?>" name="cid" value="<?php echo $course['course_id']; ?>">
           </div>
           <div class="mb-3">
             <label for="cName<?php echo $coach['coach_id']; ?>" class="form-label">Coach Name</label>
@@ -36,7 +40,7 @@ include "view-team-input-list.php";
             <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
             <input type="text" class="form-control" id="tID<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $coach['tID']; ?>">
           </div>
-            <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>">
+            <input type="hidden" name="tID" value="<?php echo $coach['coach_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
