@@ -19,7 +19,7 @@
           <div class="mb-3">
             <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
 <?php
-$TeamList = selectTeamsForInput();
+$teamList = selectTeamsForInput();
 $selectedTeam = $team['team_id'];
 include "view-team-input-list.php";
 ?>
@@ -31,10 +31,6 @@ include "view-team-input-list.php";
           <div class="mb-3">
             <label for="cPosition<?php echo $coach['coach_id']; ?>" class="form-label">Coach Position</label>
             <input type="text" class="form-control" id="cPosition<?php echo $coach['coach_id']; ?>" name="cPosition" value="<?php echo $coach['coach_position']; ?>">
-          </div>
-          <div class="mb-3">
-            <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
-            <input type="text" class="form-control" id="tID<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $coach['team_id']; ?>">
           </div>
             <input type="hidden" name="cID" value="<?php echo $coach['coach_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
