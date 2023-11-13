@@ -20,27 +20,23 @@
             <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
 <?php
 $TeamList = selectTeamsForInput();
-$selectedTeam = $coach['coach_id'];
+$selectedTeam = $team['team_id'];
 include "view-team-input-list.php";
 ?>
           </div>
           <div class="mb-3">
-            <label for="cid<?php echo $coach['coach_id']; ?>" class="form-label">Coach</label>
-            <input type="text" class="form-control" id="cid<?php echo $coach['coach_id']; ?>" name="cid" value="<?php echo $course['course_id']; ?>">
-          </div>
-          <div class="mb-3">
             <label for="cName<?php echo $coach['coach_id']; ?>" class="form-label">Coach Name</label>
-            <input type="text" class="form-control" id="cName<?php echo $coach['coach_id']; ?>" name="cName" value="<?php echo $coach['cName']; ?>">
+            <input type="text" class="form-control" id="cName<?php echo $coach['coach_id']; ?>" name="cName" value="<?php echo $coach['coach_name']; ?>">
           </div>
           <div class="mb-3">
             <label for="cPosition<?php echo $coach['coach_id']; ?>" class="form-label">Coach Position</label>
-            <input type="text" class="form-control" id="cPosition<?php echo $coach['coach_id']; ?>" name="cPosition" value="<?php echo $coach['cPosition']; ?>">
+            <input type="text" class="form-control" id="cPosition<?php echo $coach['coach_id']; ?>" name="cPosition" value="<?php echo $coach['coach_position']; ?>">
           </div>
           <div class="mb-3">
             <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
-            <input type="text" class="form-control" id="tID<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $coach['tID']; ?>">
+            <input type="text" class="form-control" id="tID<?php echo $coach['coach_id']; ?>" name="tID" value="<?php echo $coach['team_id']; ?>">
           </div>
-            <input type="hidden" name="tID" value="<?php echo $coach['coach_id']; ?>">
+            <input type="hidden" name="cID" value="<?php echo $coach['coach_id']; ?>">
             <input type="hidden" name="actionType" value="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
