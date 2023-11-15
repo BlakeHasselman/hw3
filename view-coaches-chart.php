@@ -12,7 +12,7 @@
     data: {
     datasets: [{
         data: [
-          <?php
+<?php
 while ($coach = $coaches->fetch_assoc()) {
   echo $coach['d.division_name'] . ", ";
 }
