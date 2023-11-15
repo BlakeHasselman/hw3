@@ -1,7 +1,9 @@
 <h1>Coaches Chart</h1>
-<div class="chart-container" style="height:140vh; width:180vw">
+<center>
+    <div class="chart-container" style="height:80vh; width:100vw">
     <canvas id="myChart"></canvas>
-</div>
+    </div>
+</center>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
