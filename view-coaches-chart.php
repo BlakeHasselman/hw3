@@ -1,10 +1,9 @@
 <h1>Coaches Chart</h1>
-<div>
-  <canvas id="myChart"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="chart-container" style="position: relative; height:40vh; width:80vw">
     <canvas id="chart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
   const ctx = document.getElementById('myChart');
 
@@ -34,4 +33,3 @@ while ($coach = $coaches->fetch_assoc()) {
 },
   });
 </script>
-</div>
