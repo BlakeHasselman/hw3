@@ -30,6 +30,9 @@
         </li>        
         <li class="nav-item">
           <a class="nav-link" href="players.php">Players</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" href="coaches-chart.php">Coaches Chart</a>
         </li>
       </ul>
     </div>
