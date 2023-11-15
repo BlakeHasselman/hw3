@@ -18,7 +18,7 @@ const config = {
         data: 
 <?php
 while ($team = $teams->fetch_assoc()) {
-  echo $team['d.division_name'] . ", ";
+  echo $team['div_num'] . ", ";
 }
 ?>
     }]
