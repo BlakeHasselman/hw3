@@ -1,7 +1,7 @@
+<html>
 <?php
 require_once("util-db.php");
 ?>
-<html>
 <head>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
