@@ -24,7 +24,7 @@ while ($coach = $coaches->fetch_assoc()) {
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
 <?php
-$coach = selectCoaches();
+$coaches = selectCoaches();
 while ($coach = $coaches->fetch_assoc()) {
   echo "'" . $coach['coach_name'] . "', ";
 }
