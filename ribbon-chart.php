@@ -1,4 +1,4 @@
-
+<script src="https://plotly.com/javascript/animations/"></script>
 <script>
 Plotly.newPlot('myDiv', [{
   x: [1, 2, 3],
