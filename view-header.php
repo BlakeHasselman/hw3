@@ -37,6 +37,12 @@
          <li class="nav-item">
           <a class="nav-link" href="teams-chart.php">Teams Chart</a>
         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="teams-chart.php">Teams Chart</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="teams-chart.php">Teams Chart</a>
+        </li>
       </ul>
     </div>
   </div>
