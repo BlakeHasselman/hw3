@@ -38,7 +38,7 @@
           <a class="nav-link" href="mixed-chart.php">Mixed Chart</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="teams-chart.php">Teams Chart</a>
+          <a class="nav-link" href="stacked-bar-chart.php">Stacked Bar Chart</a>
         </li>
          <li class="nav-item">
           <a class="nav-link" href="teams-chart.php">Teams Chart</a>
