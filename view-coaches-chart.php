@@ -14,7 +14,7 @@
         data: [
           <?php
 while ($coach = $coaches->fetch_assoc()) {
-  echo $coach['d.division_name'] . ", ";
+  echo $coach['division_name'] . ", ";
 }
 ?>
 
