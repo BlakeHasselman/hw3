@@ -1,3 +1,5 @@
+
+<script>
 d3.json('https://raw.githubusercontent.com/plotly/datasets/master/3d-ribbon.json', function(figure){
 
   var trace1 = {
@@ -62,3 +64,4 @@ d3.json('https://raw.githubusercontent.com/plotly/datasets/master/3d-ribbon.json
   };
   Plotly.newPlot('myDiv', data, layout);
 });
+</script>
