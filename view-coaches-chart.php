@@ -1,5 +1,5 @@
 <h1>Coaches Chart</h1>
-<div class="chart-container" style="position: relative; height:40vh; width:80vw">
+<div class="chart-container" style="height:140vh; width:180vw">
     <canvas id="myChart"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
