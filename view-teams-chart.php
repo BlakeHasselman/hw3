@@ -23,13 +23,6 @@ while ($team = $teams->fetch_assoc()) {
 ?>
 ]
     }],
-    
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
   },
 };
 </script>
