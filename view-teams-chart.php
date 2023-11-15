@@ -15,14 +15,14 @@ const config = {
         barThickness: 6,
         maxBarThickness: 8,
         minBarLength: 2,
-        data: 
+        data: [
 <?php
 while ($team = $teams->fetch_assoc()) {
-  echo $team['d.division_name'] . ", ";
+  echo $team['num_teams'] . ", ";
 }
 ?>
-    }]
-};,
+]
+    }],
     
   options: {
     scales: {
