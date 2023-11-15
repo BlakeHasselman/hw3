@@ -3,7 +3,7 @@
   <canvas id="myChart"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<div style="width=50px; height=50px;">
+<div style="width:150px; height:150px;">
 <script>
   const ctx = document.getElementById('myChart');
 
