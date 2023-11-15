@@ -4,7 +4,7 @@ require_once("model-teams-chart.php");
 
 $pageTitle = "Teams Chart";
 include "view-header.php";
-$coaches = selectTeams();
+$teams = selectTeams();
 include "view-teams-chart.php";
 include "view-footer.php";
 ?>
