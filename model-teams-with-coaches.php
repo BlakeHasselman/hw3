@@ -61,10 +61,9 @@ function insertCoachByTeam($coach_name, $coach_position, $team_id) {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`, `team_id`) VALUES (?, ?, ?)");
         $stmt->bind_param("ssi", $coach_name, $coach_position, $team_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $success = $stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
