@@ -34,15 +34,6 @@
         <li class="nav-item">
           <a class="nav-link" href="coaches-chart.php">Coaches Chart</a>
         </li>
-         <li class="nav-item">
-          <a class="nav-link" href="mixed-chart.php">Mixed Chart</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="stacked-bar-chart.php">Stacked Bar Chart</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="ribbon-chart.php">Ribbon Chart</a>
-        </li>
       </ul>
     </div>
   </div>
