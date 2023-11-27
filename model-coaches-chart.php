@@ -2,7 +2,7 @@
 function selectCoaches() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("select coach_name, count(d.divison_name) num_div from coach c join team t on c.team_id=t.team_id join division d on d.division_id=t.division_id group by coach_name");
+        $stmt = $conn->prepare("select team_name, count(coach_name) num_coach from coach c join team t on c.team_id=t.team_id group by team_name");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
