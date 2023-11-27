@@ -16,7 +16,7 @@
         data: [
 <?php
 while ($coach = $coaches->fetch_assoc()) {
-  echo $coach['num_div'] . ", ";
+  echo $coach['num_coach'] . ", ";
 }
 ?>
 
@@ -28,7 +28,7 @@ while ($coach = $coaches->fetch_assoc()) {
 <?php
 $coaches = selectCoaches();
 while ($coach = $coaches->fetch_assoc()) {
-  echo "'" . $coach['coach_name'] . "', ";
+  echo "'" . $coach['team_name'] . "', ";
 }
 ?>
     ]
