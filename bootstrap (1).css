@@ -3843,6 +3843,7 @@ textarea.form-control-lg {
   text-decoration: none;
   background: none;
   border: 0;
+  background-color: green;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -12075,7 +12076,6 @@ textarea.form-control-lg {
 }
 .navbar {
   font-weight: 300;
-  background-color: green;
 }
 
 .bg-primary .dropdown-menu {
