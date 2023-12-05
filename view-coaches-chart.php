@@ -1,4 +1,7 @@
-<h1>Coaches Chart</h1>
+<center>
+<h1>Coaches Team Chart</h1>
+    </center>
+<p>This chart shows the different teams and how many coaches the team has</p>
 <center>
     <div class="chart-container" style="height:80vh; width:100vw">
     <canvas id="myChart"></canvas>
