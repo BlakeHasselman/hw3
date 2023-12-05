@@ -2,7 +2,7 @@
   <div class="col">
 <h1>Teams with Coaches</h1>
   </div>
-  <div class="col-auto">
+  <div class="col-6">
 <?php
 include "view-teams-with-coaches-newform.php";
 ?>
