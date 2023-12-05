@@ -2,7 +2,7 @@
   <div class="col">
 <h1>Teams with Coaches</h1>
   </div>
-  <div class="col-6">
+  <div class="col-auto">
 <?php
 include "view-teams-with-coaches-newform.php";
 ?>
@@ -26,7 +26,7 @@ while ($team = $teams->fetch_assoc()) {
       <div class="col">
         <?php echo $coach['coach_name']; ?> - <?php echo $coach['coach_position']; ?> - <?php echo $team['team_location']; ?> - <?php echo $team['team_name']; ?>
       </div>
-      <div class="col-auto">
+      <div class="col-6">
 <?php
 include "view-teams-with-coaches-editform.php";
 ?>
