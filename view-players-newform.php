@@ -28,6 +28,18 @@
     <label for="pPosition" class="form-label">Player Position</label>
     <input type="text" class="form-control" id="pPosition" name="pPosition">
   </div>
+  <div class="mb-3">
+    <label for="pJersey" class="form-label">Player Jersey</label>
+    <input type="text" class="form-control" id="pJersey" name="pJersey">
+  </div>
+  <div class="mb-3">
+    <label for="pHeight" class="form-label">Player Height</label>
+    <input type="text" class="form-control" id="pHeight" name="pHeight">
+  </div>
+  <div class="mb-3">
+    <label for="pWeight" class="form-label">Player Weight</label>
+    <input type="text" class="form-control" id="pWeight" name="pWeight">
+  </div>
       <input type="hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
