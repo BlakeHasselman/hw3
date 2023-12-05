@@ -28,6 +28,18 @@
     <label for="pPosition<?php echo $player['player_id']; ?>" class="form-label">Player Position</label>
     <input type="text" class="form-control" id="pPosition<?php echo $coach['coach_id']; ?>" name="pPosition" value="<?php echo $player['player_position']; ?>">
   </div>
+  <div class="mb-3">
+    <label for="pPosition<?php echo $player['player_id']; ?>" class="form-label">Player Jersey</label>
+    <input type="text" class="form-control" id="pJersey<?php echo $coach['coach_id']; ?>" name="pJersey" value="<?php echo $player['player_jersey']; ?>">
+  </div>
+  <div class="mb-3">
+    <label for="pPosition<?php echo $player['player_id']; ?>" class="form-label">Player Height</label>
+    <input type="text" class="form-control" id="pHeight<?php echo $coach['coach_id']; ?>" name="pHeight" value="<?php echo $player['player_height']; ?>">
+  </div>
+  <div class="mb-3">
+    <label for="pPosition<?php echo $player['player_id']; ?>" class="form-label">Player Weight</label>
+    <input type="text" class="form-control" id="pWeight<?php echo $coach['coach_id']; ?>" name="pWeight" value="<?php echo $player['player_weight']; ?>">
+  </div>
     <input type="hidden" name="pid" value="<?php echo $player['player_id']; ?>"> 
     <input type="hidden" name="actionType" value="Edit">
     <button type="submit" class="btn btn-primary">Save</button>
