@@ -13,7 +13,6 @@ include "view-header.php";
   border-width: 5px;
   flex-direction: column;
   justify-content: center;
-  background-color: silver;
 }
 .page-image {
   width: 483px;
