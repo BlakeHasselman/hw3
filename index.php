@@ -31,52 +31,6 @@ const Page = (props) => {
 export default Page
 </script>
 
-.page-container {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  min-height: 100vh;
-  align-items: center;
-  border-color: #0e44f3;
-  border-width: 5px;
-  flex-direction: column;
-  justify-content: center;
-}
-.page-image {
-  width: 483px;
-  height: 350px;
-  display: none;
-  z-index: 100;
-  box-shadow: 5px 5px 10px 0px #d4d4d4;
-  object-fit: cover;
-  border-color: var(--dl-color-gray-900);
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius4);
-}
-.page-container1 {
-  width: 100%;
-  height: 143px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.page-text {
-  font-weight: 700;
-  text-decoration: underline;
-}
-.page-container2 {
-  width: 100%;
-  height: 349px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-.page-image1 {
-  width: 1110px;
-  height: 100%;
-  object-fit: cover;
-}
-
 <?php
 include "view-footer.php";
 ?>
