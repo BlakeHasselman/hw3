@@ -10,6 +10,9 @@ include "view-players-newform.php";
       <th>ID</th>
       <th>Name</th>
       <th>Position</th>
+      <th>Jersey Number</th>
+      <th>Height</th>
+      <th>Weight</th>
       <th>Player's Team and Coaches</th>
       <th></th>
       <th></th>
@@ -24,6 +27,9 @@ while ($player = $players->fetch_assoc()) {
   <td><?php echo $player['player_id']; ?></td>
   <td><?php echo $player['player_name']; ?></td>
   <td><?php echo $player['player_position']; ?></td>
+  <td><?php echo $player['player_jersey']; ?></td>
+  <td><?php echo $player['player_height']; ?></td>
+  <td><?php echo $player['player_weight']; ?></td>
   <td><a href="players-by-team.php?id=<?php echo $player['player_id']; ?>">Player's Coaches and Team</a></td>
   <td>
   <?php
