@@ -1,5 +1,5 @@
-<center>
 <h1>Coaches Team Chart</h1>
+<center>
     <p>This chart shows the different teams and how many coaches the team has</p>
     </center>
 <center>
