@@ -5,7 +5,7 @@ include "view-header.php";
 <script>
 import React from 'react'
 
-import './page.css'
+import 'page.css'
 
 const Page = (props) => {
   return (
