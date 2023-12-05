@@ -2,7 +2,7 @@
 function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT player_id, player_name, player_position, team_id FROM player");
+        $stmt = $conn->prepare("SELECT player_id, player_name, player_position, player_jersey, player_height, player_weight team_id FROM player");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectPlayers() {
     }
 }
 
-function insertPlayer($tID, $pName, $pPosition) {
+function insertPlayer($tID, $pName, $pPosition, $pJersey, $pHeight, $pWeight) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `player` (`team_id`, `player_name`, `player_position`) VALUES (?, ?, ?)");
-        $stmt->bind_param("iss", $tID, $pName, $pPosition);
+        $stmt = $conn->prepare("INSERT INTO `player` (`team_id`, `player_name`, `player_position`, `player_jersey`, `player_height`, `player_weight`) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ississ", $tID, $pName, $pPosition, $pJersey, $pHeight, $pWeight);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertPlayer($tID, $pName, $pPosition) {
     }
 }
 
-function updatePlayer($tID, $pName, $pPosition, $pid) {
+function updatePlayer($tID, $pName, $pPosition, $pJersey, $pHeight, $pWeight, $pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `player` set `team_id` = ?, `player_name` = ?, `player_position` = ? where player_id = ?");
-        $stmt->bind_param("issi", $tID, $pName, $pPosition, $pid);
+        $stmt = $conn->prepare("update `player` set `team_id` = ?, `player_name` = ?, `player_position` = ?, `player_jersey` = ?, `player_height` = ?, `player_weight` = ? where player_id = ?");
+        $stmt->bind_param("ississi", $tID, $pName, $pPosition, $pJersey, $pHeight, $pWeight, $pid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
