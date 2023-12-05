@@ -6,6 +6,7 @@ include "view-header.php";
 import React from 'react'
 
 import 'page.css'
+</script>
 
 const Page = (props) => {
   return (
@@ -29,7 +30,7 @@ const Page = (props) => {
 }
 
 export default Page
-</script>
+
 
 <?php
 include "view-footer.php";
