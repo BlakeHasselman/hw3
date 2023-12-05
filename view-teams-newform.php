@@ -28,6 +28,10 @@
     <label for="tLocation" class="form-label">Team Location</label>
     <input type="text" class="form-control" id="tLocation" name="tLocation">
   </div>
+  <div class="mb-3">
+    <label for="tFounded" class="form-label">Founded Year</label>
+    <input type="text" class="form-control" id="tFounded" name="tFounded">
+  </div>
       <input type="hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
