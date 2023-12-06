@@ -41,7 +41,7 @@ function updateTeam($dID, $tName, $tLocation, $tFounded, $tID, $ssWins, $ssLosse
         $success = $stmt->execute();
         $success = $stmt2->execute();
         $conn->close();
-        return $success, $success1;
+        return $success1;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
