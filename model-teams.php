@@ -47,9 +47,6 @@ function deleteTeam($tID, $ssID) {
         $stmt = $conn->prepare("delete from team where team_id = ?");
         $stmt->bind_param("i", $tID);
         $success = $stmt->execute();
-        $stmt2 = $conn->prepare("delete from season_stats where stats_id = ?");
-        $stmt2->bind_param("i", $sID);
-        $success = $stmt2->execute();
         $conn->close();
         return $success;
     } catch (Exception $e) {
