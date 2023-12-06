@@ -15,6 +15,9 @@ include "view-coaches-newform.php";
       <th>ID</th>
       <th>Name</th>
       <th>Staff Position</th>
+              <th>Start Date</th>
+              <th>Total Wins</th>
+              <th>Total Losses</th>
         <th></th>
         <th></th>
         <th></th>
@@ -28,6 +31,9 @@ while ($coach = $coaches->fetch_assoc()) {
   <td><?php echo $coach['coach_id']; ?></td>
   <td><?php echo $coach['coach_name']; ?></td>
   <td><?php echo $coach['coach_position']; ?></td>
+  <td><?php echo $coach['coach_start']; ?></td>
+  <td><?php echo $coach['coach_wins']; ?></td>
+  <td><?php echo $coach['coach_losses']; ?></td>
   <td>
 <?php
 include "view-coaches-editform.php";
