@@ -32,22 +32,6 @@
     <label for="tFounded" class="form-label">Founded Year</label>
     <input type="text" class="form-control" id="tFounded" name="tFounded">
   </div>
-  <div class="mb-3">
-    <label for="ssWins" class="form-label">Season Wins</label>
-    <input type="text" class="form-control" id="ssWins" name="ssWins">
-  </div>
-    <div class="mb-3">
-    <label for="ssLosses" class="form-label">Season Losses</label>
-    <input type="text" class="form-control" id="ssLosses" name="ssLosses">
-  </div>
-  <div class="mb-3">
-    <label for="ssRank" class="form-label">Conference Rank</label>
-    <input type="text" class="form-control" id="ssRank" name="ssRank">
-  </div>
-  <div class="mb-3">
-    <label for="ssPlayoff" class="form-label">Playoff Qualification</label>
-    <input type="text" class="form-control" id="ssPlayoff" name="ssPlayoff">
-  </div>
       <input type="hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
