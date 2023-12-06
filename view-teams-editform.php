@@ -33,20 +33,20 @@
     <input type="text" class="form-control" id="tFounded<?php echo $team['team_id']; ?>" name="tFounded" value="<?php echo $team['team_founded']; ?>">
   </div>
   <div class="mb-3">
-    <label for="ssWins<?php echo $teamId['wins']; ?>" class="form-label">Season Wins</label>
-    <input type="text" class="form-control" id="ssWins<?php echo $teamId['wins']; ?>" name="ssWins" value="<?php echo $teamId['wins']; ?>">
+    <label for="ssWins<?php echo $team['wins']; ?>" class="form-label">Season Wins</label>
+    <input type="text" class="form-control" id="ssWins<?php echo $team['wins']; ?>" name="ssWins" value="<?php echo $team['wins']; ?>">
   </div>
   <div class="mb-3">
-    <label for="ssLosses<?php echo $teamId['losses']; ?>" class="form-label">Season Losses</label>
-    <input type="text" class="form-control" id="ssLosses<?php echo $teamId['losses']; ?>" name="ssLosses" value="<?php echo $teamId['losses']; ?>">
+    <label for="ssLosses<?php echo $team['losses']; ?>" class="form-label">Season Losses</label>
+    <input type="text" class="form-control" id="ssLosses<?php echo $team['losses']; ?>" name="ssLosses" value="<?php echo $team['losses']; ?>">
   </div>
   <div class="mb-3">
-    <label for="ssRank<?php echo $teamId['conference_rank']; ?>" class="form-label">Conference Rank</label>
-    <input type="text" class="form-control" id="ssRank<?php echo $teamId['conference_rank']; ?>" name="ssRank" value="<?php echo $teamId['conference_rank']; ?>">
+    <label for="ssRank<?php echo $team['conference_rank']; ?>" class="form-label">Conference Rank</label>
+    <input type="text" class="form-control" id="ssRank<?php echo $team['conference_rank']; ?>" name="ssRank" value="<?php echo $team['conference_rank']; ?>">
   </div>
   <div class="mb-3">
-    <label for="ssPlayoff<?php echo $teamId['playoff_status']; ?>" class="form-label">Conference Rank</label>
-    <input type="text" class="form-control" id="ssPlayoff<?php echo $teamId['playoff_status']; ?>" name="ssPlayoff" value="<?php echo $teamId['playoff_status']; ?>">
+    <label for="ssPlayoff<?php echo $team['playoff_status']; ?>" class="form-label">Conference Rank</label>
+    <input type="text" class="form-control" id="ssPlayoff<?php echo $team['playoff_status']; ?>" name="ssPlayoff" value="<?php echo $team['playoff_status']; ?>">
   </div>
     <input type="hidden" name="tID" value="<?php echo $team['team_id']; ?>"> 
     <input type="hidden" name="ssID" value="<?php echo $teamId['stats_id']; ?>"> 
