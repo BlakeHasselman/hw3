@@ -18,13 +18,13 @@ function insertTeam($dID, $tName, $tLocation, $tFounded, $ssWins, $ssLosses, $ss
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `team` (`division_id`, `team_name`, `team_location`, `team_founded`) VALUES (?, ?, ?)");
         $stmt->bind_param("issi", $dID, $tName, $tLocation, $tFounded);
-        $success = $stmt->execute();
-        $teamId = $conn->insert_id;
         $stmt2 = $conn->prepare("insert into `season_stats` (`wins`, `losses`, `conference_rank`, `playoff_status`) VALUES (?, ?, ?, ?)");
         $stmt2->bind_param("iiis", $ssWins, $ssLosses, $ssRank, $ssPlayoff);
-        $stmt2->execute();
+        $teamId = $conn->insert_id;
+        $success = $stmt->execute();
+        $success1 = $stmt2->execute();
         $conn->close();
-        return $success;
+        return $success, $success1;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
@@ -41,7 +41,7 @@ function updateTeam($dID, $tName, $tLocation, $tFounded, $tID, $ssWins, $ssLosse
         $success = $stmt->execute();
         $success = $stmt2->execute();
         $conn->close();
-        return $success;
+        return $success, $success1;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
@@ -54,9 +54,9 @@ function deleteTeam($tID, $ssID) {
         $stmt = $conn->prepare("delete from team where team_id = ?");
         $stmt->bind_param("i", $tID);
         $success = $stmt->execute();
-        $stmt = $conn->prepare("delete from season_stats where stats_id = ?");
-        $stmt->bind_param("i", $sID);
-        $success = $stmt->execute();
+        $stmt2 = $conn->prepare("delete from season_stats where stats_id = ?");
+        $stmt2->bind_param("i", $sID);
+        $success = $stmt2->execute();
         $conn->close();
         return $success;
     } catch (Exception $e) {
