@@ -2,7 +2,7 @@
 function selectCoaches() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT coach_id, coach_name, coach_position, team_id FROM coach;");
+        $stmt = $conn->prepare("SELECT coach_id, coach_name, coach_position, coach_start, coach_wins, coach_losses, team_id FROM coach;");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,11 +13,11 @@ function selectCoaches() {
     }
 }
 
-function insertCoach($tID, $cName, $cPosition) {
+function insertCoach($tID, $cName, $cPosition, $cStart, $cWins, $cLosses) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `coach` (`team_id`, `coach_name`, `coach_position`) VALUES (?, ?, ?)");
-        $stmt->bind_param("iss", $tID, $cName, $cPosition);
+        $stmt = $conn->prepare("INSERT INTO `coach` (`team_id`, `coach_name`, `coach_position`, `coach_start`, `coach_wins`, `coach_losses`) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("issiii", $tID, $cName, $cPosition, $cStart, $cWins, $cLosses);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertCoach($tID, $cName, $cPosition) {
     }
 }
 
-function updateCoach($tID, $cName, $cPosition, $cid) {
+function updateCoach($tID, $cName, $cPosition, $cStart, $cWins, $cLosses, $cid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `coach` set `team_id` = ?, `coach_name` = ?, `coach_position` = ? where coach_id = ?");
-        $stmt->bind_param("issi", $tID, $cName, $cPosition, $cid);
+        $stmt = $conn->prepare("update `coach` set `team_id` = ?, `coach_name` = ?, `coach_position` = ?, `coach_start` = ?, `coach_wins` = ?, `coach_losses` = ? where coach_id = ?");
+        $stmt->bind_param("issiiii", $tID, $cName, $cPosition, $cStart, $cWins, $cLosses, $cid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
