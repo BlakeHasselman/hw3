@@ -11,6 +11,10 @@ include "view-teams-newform.php";
       <th>Name</th>
       <th>Location</th>
         <th>Founded Year</th>
+       <th>Season Wins</th>
+      <th>Season Losses</th>
+        <th>Conference Rank</th>
+        <th>Playoff Qualification</th>
         <th>Link to Coaches and Team</th>
         <th>Link to Teams and Division</th>
         <th></th>
@@ -27,6 +31,10 @@ while ($team = $teams->fetch_assoc()) {
   <td><?php echo $team['team_name']; ?></td>
   <td><?php echo $team['team_location']; ?></td>
   <td><?php echo $team['team_founded']; ?></td>
+  <td><?php echo $team['wins']; ?></td>
+  <td><?php echo $team['losses']; ?></td>
+  <td><?php echo $team['conference_rank']; ?></td>
+  <td><?php echo $team['playoff_status']; ?></td>
   <td><a href="coaches-by-team.php?id=<?php echo $team['team_id']; ?>">Coaches</a></td>
   <td><a href="teams-by-division.php?id=<?php echo $team['team_id']; ?>">Division</a></td>
   <td>
