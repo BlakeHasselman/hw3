@@ -28,6 +28,18 @@
     <label for="cPosition<?php echo $coach['coach_id']; ?>" class="form-label">Staff Position</label>
     <input type="text" class="form-control" id="cPosition<?php echo $coach['coach_id']; ?>" name="cPosition" value="<?php echo $coach['coach_position']; ?>">
   </div>
+  <div class="mb-3">
+    <label for="cStart<?php echo $coach['coach_id']; ?>" class="form-label">Start Date</label>
+    <input type="text" class="form-control" id="cStart<?php echo $coach['coach_id']; ?>" name="cStart" value="<?php echo $coach['coach_start']; ?>">
+  </div>
+  <div class="mb-3">
+    <label for="cWins<?php echo $coach['coach_id']; ?>" class="form-label">Total Wins</label>
+    <input type="text" class="form-control" id="cWins<?php echo $coach['coach_id']; ?>" name="cWins" value="<?php echo $coach['coach_wins']; ?>">
+  </div>
+  <div class="mb-3">
+    <label for="cLosses<?php echo $coach['coach_id']; ?>" class="form-label">Total Losses</label>
+    <input type="text" class="form-control" id="cLosses<?php echo $coach['coach_id']; ?>" name="cLosses" value="<?php echo $coach['coach_losses']; ?>">
+  </div>
     <input type="hidden" name="cid" value="<?php echo $coach['coach_id']; ?>"> 
     <input type="hidden" name="actionType" value="Edit">
     <button type="submit" class="btn btn-primary">Save</button>
