@@ -28,6 +28,18 @@
     <label for="cPosition" class="form-label">Staff Position</label>
     <input type="text" class="form-control" id="cPosition" name="cPosition">
   </div>
+  <div class="mb-3">
+    <label for="cStart" class="form-label">Start Date</label>
+    <input type="text" class="form-control" id="cStart" name="cStart">
+  </div>
+  <div class="mb-3">
+    <label for="cWins" class="form-label">Total Wins</label>
+    <input type="text" class="form-control" id="cWins" name="cWins">
+  </div>
+  <div class="mb-3">
+    <label for="cLosses" class="form-label">Total Losses</label>
+    <input type="text" class="form-control" id="cLosses" name="cLosses">
+  </div>
       <input type="hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
