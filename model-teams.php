@@ -24,7 +24,7 @@ function insertTeam($dID, $tName, $tLocation, $tFounded, $ssWins, $ssLosses, $ss
         $success = $stmt->execute();
         $success1 = $stmt2->execute();
         $conn->close();
-        return $success, $success1;
+        return $success1;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
