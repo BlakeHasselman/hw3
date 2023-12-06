@@ -16,7 +16,7 @@ function selectTeams() {
 function insertTeam($dID, $tName, $tLocation, $tFounded) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `team` (`division_id`, `team_name`, `team_location`, `team_founded`) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `team` (`division_id`, `team_name`, `team_location`, `team_founded`) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("issi", $dID, $tName, $tLocation, $tFounded);
         $success = $stmt->execute();
         $conn->close();
