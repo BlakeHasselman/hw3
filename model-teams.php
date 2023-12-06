@@ -38,7 +38,7 @@ function updateTeam($dID, $tName, $tLocation, $tFounded, $tID, $ssWins, $ssLosse
         $stmt->bind_param("issii", $dID, $tName, $tLocation, $tFounded, $tID);
         $success = $stmt->execute();
         $stmt2 = $conn->prepare("update `season_stats` set `wins` = ?, `losses` = ?, `conference_rank` = ?, `playoff_status` = ? where stats_id = ?");
-        $stmt2->bind_param("iiisi", $ssWins, $ssLosses, $ssRank, $ssPlayoff, ssID);
+        $stmt2->bind_param("iiisi", $ssWins, $ssLosses, $ssRank, $ssPlayoff, $ssID);
         $stmt2->execute();
         $conn->close();
         return $success;
