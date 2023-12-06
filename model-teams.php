@@ -22,7 +22,7 @@ function insertTeam($dID, $tName, $tLocation, $tFounded, $ssWins, $ssLosses, $ss
         $stmt2->bind_param("iiis", $ssWins, $ssLosses, $ssRank, $ssPlayoff);
         $teamId = $conn->insert_id;
         $success = $stmt->execute();
-        $success1 = $stmt2->execute();
+        $stmt2->execute();
         $conn->close();
         return $success;
     } catch (Exception $e) {
@@ -39,9 +39,9 @@ function updateTeam($dID, $tName, $tLocation, $tFounded, $tID, $ssWins, $ssLosse
         $stmt2 = $conn->prepare("update `season_stats` set `wins` = ?, `losses` = ?, `conference_rank` = ?, `playoff_status` = ? where stats_id = ?");
         $stmt2->bind_param("iiisi", $ssWins, $ssLosses, $ssRank, $ssPlayoff, $ssID);
         $success = $stmt->execute();
-        $success = $stmt2->execute();
+        $stmt2->execute();
         $conn->close();
-        return $success1;
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
