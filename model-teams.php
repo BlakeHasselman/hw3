@@ -13,16 +13,12 @@ function selectTeams() {
     }
 }
 
-function insertTeam($dID, $tName, $tLocation, $tFounded, $ssWins, $ssLosses, $ssRank, $ssPlayoff) {
+function insertTeam($dID, $tName, $tLocation, $tFounded) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `team` (`division_id`, `team_name`, `team_location`, `team_founded`) VALUES (?, ?, ?)");
         $stmt->bind_param("issi", $dID, $tName, $tLocation, $tFounded);
         $success = $stmt->execute();
-        $stmt2 = $conn->prepare("insert into `season_stats` (`wins`, `losses`, `conference_rank`, `playoff_status`) VALUES (?, ?, ?, ?)");
-        $stmt2->bind_param("iiis", $ssWins, $ssLosses, $ssRank, $ssPlayoff);
-        $teamId = $conn->insert_id;
-        $stmt2->execute();
         $conn->close();
         return $success;
     } catch (Exception $e) {
