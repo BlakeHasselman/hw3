@@ -28,7 +28,7 @@
     <label for="tID" class="form-label">Team ID</label>
 <?php
 $teamList = selectTeamsForInput();
-$selectedTeam = 0;
+$selectedTeam = $team['team_id'];
 include "view-team-input-list.php";
 ?>
   </div>
