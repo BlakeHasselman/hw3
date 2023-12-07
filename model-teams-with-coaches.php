@@ -56,11 +56,11 @@ function selectCoachesForInput() {
     }
 }
 
-function insertCoachByTeam($tID, $cName, $cPosition, $cID) {
+function insertCoachByTeam($tID, $cName, $cPosition) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`, `team_id`, `coach_id`) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssii", $cName, $cPosition, $tID, $cID);
+        $stmt = $conn->prepare("INSERT INTO `coach` (`coach_name`, `coach_position`, `team_id`) VALUES (?, ?, ?)");
+        $stmt->bind_param("ssi", $cName, $cPosition, $tID);
         $success = $stmt->execute();
         $conn->close();
         return $success;
