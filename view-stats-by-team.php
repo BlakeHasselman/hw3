@@ -15,17 +15,17 @@
     </thead>
     <tbody>
 <?php
-while ($team = $teams->fetch_assoc()) {
+while ($stat = $stats->fetch_assoc()) {
   ?>
 <tr>
-  <td><?php echo $team['team_id']; ?></td>
-  <td><?php echo $team['team_location']; ?></td>
-  <td><?php echo $team['team_name']; ?></td>
-  <td><?php echo $team['team_founded']; ?></td>
-  <td><?php echo $team['wins']; ?></td>
-  <td><?php echo $team['losses']; ?></td>
-  <td><?php echo $team['conference_rank']; ?></td>
-  <td><?php echo $team['playoff_status']; ?></td>
+  <td><?php echo $stat['team_id']; ?></td>
+  <td><?php echo $stat['team_location']; ?></td>
+  <td><?php echo $stat['team_name']; ?></td>
+  <td><?php echo $stat['team_founded']; ?></td>
+  <td><?php echo $stat['wins']; ?></td>
+  <td><?php echo $stat['losses']; ?></td>
+  <td><?php echo $stat['conference_rank']; ?></td>
+  <td><?php echo $stat['playoff_status']; ?></td>
 </tr>     
   <?php
   
