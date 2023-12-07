@@ -20,7 +20,7 @@
             <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
 <?php
 $teamList = selectTeamsForInput();
-$selectedTeam = $team['team_id'];
+$selectedTeam = $team = 0;
 include "view-team-input-list.php";
 ?>
           </div>
