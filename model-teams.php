@@ -30,7 +30,7 @@ function insertTeam($dID, $tName, $tLocation, $tFounded) {
 function updateTeam($dID, $tName, $tLocation, $tFounded, $tID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `team` set `division_id` = ?, `team_name` = ?, `team_location` = ?, `team_founded` = ? where team_id = ?");
+        $stmt = $conn->prepare("update `team` set `division_id` = ?, `team_name` = ?, `team_location` = ?, `team_founded` = ? where `team_id` = ?");
         $stmt->bind_param("issii", $dID, $tName, $tLocation, $tFounded, $tID);
         $success = $stmt->execute();
         $conn->close();
