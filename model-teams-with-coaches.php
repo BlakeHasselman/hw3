@@ -67,7 +67,7 @@ function insertCoachByTeam($tID, $cID, $cName, $cPosition) {
     } catch (Exception $e) {
         $conn->close();
         throw $e;
-    } 
+    }
 }
 
 function updateCoachByTeam($tID, $cName, $cPosition, $cID) {
