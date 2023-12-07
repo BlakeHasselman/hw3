@@ -22,8 +22,8 @@ while ($team = $teams->fetch_assoc()) {
   while ($coach = $coaches->fetch_assoc()) {
 ?>
     <li class="list-group-item">
-    <div class="row">
-      <div class="col-6">
+    <div class="row-8">
+      <div class="col">
         <?php echo $coach['coach_name']; ?> - <?php echo $coach['coach_position']; ?> - <?php echo $team['team_location']; ?> - <?php echo $team['team_name']; ?>
       </div>
       <div class="col-auto">
