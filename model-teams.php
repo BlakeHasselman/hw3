@@ -2,7 +2,7 @@
 function selectTeams() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT t.team_id, stats_id, team_name, team_location, team_founded, ss.wins, ss.losses, ss.conference_rank, ss.playoff_status, division_id FROM `team` t join season_stats ss on ss.team_id=t.team_id");
+        $stmt = $conn->prepare("SELECT t.team_id, stats_id, team_name, team_location, team_founded, division_id FROM `team`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -41,7 +41,7 @@ function updateTeam($dID, $tName, $tLocation, $tFounded, $tID) {
     }
 }
 
-function deleteTeam($tID, $ssID) {
+function deleteTeam($tID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("delete from team where team_id = ?");
