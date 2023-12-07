@@ -32,6 +32,10 @@ include "view-team-input-list.php";
     <label for="cPosition" class="form-label">Staff Position</label>
     <input type="text" class="form-control" id="cPosition" name="cPosition">
   </div>
+  <div class="mb-3">
+    <label for="cID" class="form-label">Coach ID</label>
+    <input type="text" class="form-control" id="cID" name="cID">
+  </div>
       <input type="hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
