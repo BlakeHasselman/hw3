@@ -16,6 +16,14 @@
       </div>
       <div class="modal-body">
     <form method="post" action="">
+                <div class="mb-3">
+            <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
+<?php
+$teamList = selectTeamsForInput();
+$selectedTeam = $team['team_id'];
+include "view-team-input-list.php";
+?>
+          </div>
   <div class="mb-3">
     <label for="cName" class="form-label">Coach Name</label>
     <input type="text" class="form-control" id="cName" name="cName">
@@ -23,14 +31,6 @@
   <div class="mb-3">
     <label for="cPosition" class="form-label">Staff Position</label>
     <input type="text" class="form-control" id="cPosition" name="cPosition">
-  </div>
-    <div class="mb-3">
-    <label for="tID" class="form-label">Team ID</label>
-<?php
-$teamList = selectTeamsForInput();
-$selectedTeam = 0;
-include "view-team-input-list.php";
-?>
   </div>
       <input type="hidden" name="actionType" value="Add">
     <button type="submit" class="btn btn-primary">Save</button>
