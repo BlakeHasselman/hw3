@@ -17,7 +17,7 @@
       <div class="modal-body">
     <form method="post" action="">
                 <div class="mb-3">
-            <label for="tID<?php echo $coach['coach_id']; ?>" class="form-label">Team</label>
+            <label for="tID<?php echo $team['team_id']; ?>" class="form-label">Team</label>
 <?php
 $teamList = selectTeamsForInput();
 $selectedTeam = $team = 0;
