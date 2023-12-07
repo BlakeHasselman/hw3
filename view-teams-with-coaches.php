@@ -22,8 +22,7 @@ while ($team = $teams->fetch_assoc()) {
   while ($coach = $coaches->fetch_assoc()) {
 ?>
     <li class="list-group-item">
-    <div class="row-8">
-      <div class="col">
+    <div class="row">
         <?php echo $coach['coach_name']; ?> - <?php echo $coach['coach_position']; ?> - <?php echo $team['team_location']; ?> - <?php echo $team['team_name']; ?>
       </div>
       <div class="col-auto">
@@ -57,3 +56,4 @@ include "view-teams-with-coaches-editform.php";
 }
 ?>
 </div>
+
